@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+
+  header {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  #hometop {
+    position: relative;
+    z-index: 9;
+    height: 42px;
+    background: white;
+    border-bottom: 1px solid #e3e3e3;
+    
+}
+
+#hometop .container {
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+}
+
+#hometop-second,#homemenu {
+    position: relative;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#hometop-second .container {
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+    height: 85px;
+}
+
+.container {
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+  main {
+    padding: 20px;
+  }
+
+  ul, li, ol, dl, dt, dd {
+    padding-left: 0;
+    list-style: none;
+}
+
+#hometop .right-box {
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+    color: #6C757D;
+}
+#hometop .left-box {
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+    color: #6C757D;
+}
+
+#hometop .menu ul{
+    text-align: center;
+}
+
+#hometop .logbox li{
+    float: left;
+}
+
+#hometop-second .hometopsec-right {    
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+}
+
+
+#hometop-second .hometopsec-right li{    
+    float: left;
+}
+
+
+
+#homemenu .menu li{
+
+    display: inline-block;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 40px;
+    padding: 0;
+
+    
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-bottom: 20px;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+  .home-button {
+    text-align: center;
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .home-button:hover {
+    background-color: #0056b3;
+  }
+
+  footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  .rollingbanner{
+    position: relative;
+    width: 180px;
+    height: 32px;
+    font-size: .875rem;
+    letter-spacing: -1px;
+    padding: 7px 15px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    border-radius: 16px;
+    
+}
+
+/* 롤링 배너 */
+.rollingbanner > .wrap{
+    position: relative;
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}        
+.rolling ul{
+    list-style: none;
+}
+.rollingbanner li{
+    position: absolute;
+    top: -36px;
+    left: 0;
+}
+/* 이전, 현재, 다음 롤링 배너 표시 */
+.rollingbanner li.final{
+    top: 36px;
+    transition: top 0.5s ease;
+}
+.rollingbanner li.first{
+    top: 0;
+    transition: top 0.5s ease;
+}
+.rollingbanner li.second{
+    top: -36px;
+}
+
+
+#hbtn{
+  text-align: center;
+}
