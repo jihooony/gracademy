@@ -15,4 +15,9 @@ public class Homecontroller {
         return "/result/newmember";
     }
 
+    @RequestMapping("/location")
+    public String location(){
+        return "/menu/location";
+    }
+
 }

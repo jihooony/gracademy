@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <title>지점별 위치</title>
+    <style>
+        .map-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .map {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .map-name {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>지점별 위치 조회</h1>
+
+    <div class="map-container">
+        <div id="busanMap" class="map"></div>
+        <div id="seoulMap" class="map"></div>
+        <div id="daeguMap" class="map"></div>
+    </div>
+    <a href="/" type="button">홈</a>
+
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=105ee5bebdcbc5414bd3950be2ed07d8&libraries=services"></script>
+    <script>
+        function initMap() {
+            var busanContainer = document.getElementById('busanMap');
+            var seoulContainer = document.getElementById('seoulMap');
+            var daeguContainer = document.getElementById('daeguMap');
+            
+            var busanPosition = new kakao.maps.LatLng(35.15959, 129.06020);
+            var seoulPosition = new kakao.maps.LatLng(37.55901, 126.94351);
+            var daeguPosition = new kakao.maps.LatLng(35.87663, 128.59768);
+            
+            var busanOptions = {
+                center: busanPosition,
+                level: 3
+            };
+            
+            var seoulOptions = {
+                center: seoulPosition,
+                level: 3
+            };
+            
+            var daeguOptions = {
+                center: daeguPosition,
+                level: 3
+            };
+            
+            var busanMap = new kakao.maps.Map(busanContainer, busanOptions);
+            var seoulMap = new kakao.maps.Map(seoulContainer, seoulOptions);
+            var daeguMap = new kakao.maps.Map(daeguContainer, daeguOptions);
+
+            var busanMarker = new kakao.maps.Marker({
+                position: busanPosition,
+                map: busanMap
+            });
+
+            var seoulMarker = new kakao.maps.Marker({
+                position: seoulPosition,
+                map: seoulMap
+            });
+
+            var daeguMarker = new kakao.maps.Marker({
+                position: daeguPosition,
+                map: daeguMap
+            });
+
+            var busanName = new kakao.maps.CustomOverlay({
+                position: busanPosition,
+                content: '<div class="map-name">부산 지점</div>'
+            });
+
+            var seoulName = new kakao.maps.CustomOverlay({
+                position: seoulPosition,
+                content: '<div class="map-name">서울 지점</div>'
+            });
+
+            var daeguName = new kakao.maps.CustomOverlay({
+                position: daeguPosition,
+                content: '<div class="map-name">대구 지점</div>'
+            });
+
+            busanName.setMap(busanMap);
+            seoulName.setMap(seoulMap);
+            daeguName.setMap(daeguMap);
+        }
+
+        kakao.maps.load(function() {
+            initMap();
+        });
+    </script>
+</body>
+</html>

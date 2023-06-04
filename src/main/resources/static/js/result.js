@@ -7,6 +7,7 @@ $(document).ready(function() {
   
       $(this).addClass('current');
       $("#" + tab_id).addClass('current');
+      
     });
   
     document.getElementById("myForm").addEventListener("submit", function(e) {

@@ -1,39 +1,82 @@
-ul{
+div {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  ul {
     list-style: none;
-}
-
-body{
-    margin-top: 100px;
-}
-.container{
-    width: 800px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    margin-top: 50px;
+  }
+  
+  .container {
+    width: 400px;
     margin: 0 auto;
-}
-
-ul.tabs{
-    margin: 0px;
-    padding: 0px;
+    border: #555;
+    text-align: center;
+  }
+  
+  ul.tabs {
+    margin: 0;
+    padding: 0;
     list-style: none;
-}
-ul.tabs li{
-    background: none;
-    color: #222;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  ul.tabs li {
+    background: #f2f2f2;
+    color: #555;
     padding: 10px 15px;
     cursor: pointer;
-}
-
-ul.tabs li.current{
-    background: #ededed;
-    color: #222;
-}
-
-.tab-content{
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  
+  ul.tabs li.tab-link-medium {
+    padding: 15px 25px;
+    font-size: 16px;
+  }
+  
+  ul.tabs li.current {
+    background: #555;
+    color: #fff;
+  }
+  
+  .tab-content {
     display: none;
-    background: #ededed;
+    background: #f2f2f2;
     padding: 15px;
-}
-
-.tab-content.current{
-    display: inherit;
-}
+    margin-top: 10px;
+    border-radius: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab-content.current {
+    display: block;
+  }
+  
+  
+  .container form input,
+  .container form select {
+    margin: 5px 0;
+  }
+  
+  .container form button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .container form button[type="submit"]:hover {
+    background-color: #333;
+  }

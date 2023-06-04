@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
     <link rel="stylesheet" href="css/result.css">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     
     <title>문의 남기기</title>
+
+    <script>
+        window.onload = function() {
+            window.resizeTo(500, 450); // 창의 너비와 높이를 조절
+        }
+    </script>
 </head>
 <body>
 
@@ -46,13 +52,15 @@
                 </li>
             </ul>
         </div>
-        
-        <input type="text" name="newname" maxlength="10">
-        <input type="text" name="newphone" maxlength="15">
+        이름 :
+        <input type="text" name="newname" maxlength="10">  
         <select name="newgender" id="gender">
             <option value="남">남</option>
             <option value="여">여</option>
-        </select>
+        </select><br>
+        전화번호 :
+        <input type="text" name="newphone" maxlength="15">
+      <br>
 
         <button type="submit">제출</button>
     </form>
